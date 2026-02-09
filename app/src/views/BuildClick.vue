@@ -11,7 +11,8 @@ const arrrayofguds = ref([
   {nameofguds: 'ApplePine'},
   {nameofguds: 'RangeOr'},
   {nameofguds: 'onipeppers'},
-  {nameofguds: 'sechee'}
+  {nameofguds: 'sechee'},
+  {nameofguds: 'pleap'}
 ])
 
 </script>
