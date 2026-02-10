@@ -2,19 +2,24 @@
     <div>
         <h2>{{ guds.nameofguds }}</h2>
         <h2>{{ guds.price }}</h2>
+        <button @click="cartadding">add to the side</button>
     </div>
-    <button @click="cartadding">add to the side</button>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 defineProps({
     guds:{
         type:Object,
         required: true
     }
 })
-function cartadding() {
 
+const total = ref(0)
+
+function cartadding() {
+    total + guds.price
+    return total
 }
 </script>
 
@@ -24,8 +29,9 @@ div{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 400px;
-    width: 200px;
+    height: 500px;
+    width: 300px;
     border: 3px solid blue;
+    margin: 100px;
 }
 </style>
