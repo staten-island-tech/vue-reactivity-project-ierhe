@@ -10,16 +10,17 @@ import TwoBox from '@/components/TwoBox.vue';
 const arrrayofguds = ref([
   {nameofguds: 'ApplePine', price:1},
   {nameofguds: 'RangeOr', price:2},
-  {nameofguds: 'onipeppers', price:3},
-  {nameofguds: 'sechee', price:1},
-  {nameofguds: 'pleap', price:2}
+  {nameofguds: 'OniPepper', price:3},
+  {nameofguds: 'seChee', price:1},
+  {nameofguds: 'pleAp', price:2}
 ])
 
 </script>
 
 <style scoped>
 div{
-  flex-direction: column;
+  display:flex;
+  flex-direction: row;
 
 }
 </style>
