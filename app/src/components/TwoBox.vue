@@ -1,7 +1,9 @@
 <template>
     <div>
         <h2>{{ guds.nameofguds }}</h2>
+        <h2>{{ guds.price }}</h2>
     </div>
+    <button @click="cartadding">add to the side</button>
 </template>
 
 <script setup>
@@ -11,6 +13,9 @@ defineProps({
         required: true
     }
 })
+function cartadding() {
+
+}
 </script>
 
 <style scoped>
