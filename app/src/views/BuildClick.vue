@@ -18,5 +18,8 @@ const arrrayofguds = ref([
 </script>
 
 <style scoped>
+div{
+  flex-direction: column;
 
+}
 </style>
