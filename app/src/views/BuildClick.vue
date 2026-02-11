@@ -2,6 +2,7 @@
   <div>
     <TwoBox v-for="guds in arrrayofguds" :key="guds.nameofguds" :guds="guds">{{ guds.nameofguds }}</TwoBox>
   </div>
+  <h2></h2>
   <h2>The total of the guds is {{ totalmoney }}</h2>
 </template>
 
@@ -15,7 +16,7 @@ const arrrayofguds = ref([
   {nameofguds: 'seChee', price:1},
   {nameofguds: 'pleAp', price:2}
 ])
-const totalmoney = 0
+let totalmoney = 0
 
 </script>
 
@@ -24,5 +25,9 @@ div{
   display:flex;
   flex-direction: row;
 
+}
+
+.pleAP{
+  z-index: 1;
 }
 </style>
