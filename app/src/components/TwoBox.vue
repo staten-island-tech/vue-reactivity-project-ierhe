@@ -17,9 +17,9 @@ defineProps({
 
 const total = ref(0)
 
-function cartadding() {
-    total + guds.price
-    return total
+function cartadding(item) {
+    totalmoney = total + item.price
+    return totalmoney
 }
 </script>
 
