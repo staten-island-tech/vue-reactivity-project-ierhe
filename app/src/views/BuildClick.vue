@@ -21,7 +21,8 @@ const arrrayofguds = ([
   {nameofguds: 'OniPepper', price:3},
   {nameofguds: 'seChee', price:1},
   {nameofguds: 'pleAp', price:2},
-  {nameofguds: 'Arpe', price:3}
+  {nameofguds: 'Arpe', price:3},
+  {nameofguds: 'Totoma', price:3},
 ])
 let totalmoney = ref(0)
 
