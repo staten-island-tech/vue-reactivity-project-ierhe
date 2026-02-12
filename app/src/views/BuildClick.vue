@@ -3,9 +3,9 @@
     <TwoBox v-for="guds in arrrayofguds" 
     :key="guds.nameofguds" 
     :guds="guds">{{ guds.nameofguds }}
-    <slot>
-      <button @click="cartadding">add to the side</button>
-    </slot>
+    <button @click="cartadding">
+      <slot>Add to the sideo</slot>
+    </button>
     </TwoBox>
   </div>
   <h2></h2>
@@ -23,7 +23,7 @@ const arrrayofguds = ([
   {nameofguds: 'pleAp', price:2},
   {nameofguds: 'Arpe', price:3}
 ])
-let totalmoney = 0
+let totalmoney = ref(0)
 
 function cartadding(item) {
     totalmoney = total + item.price
