@@ -1,6 +1,12 @@
 <template>
   <div>
-    <TwoBox v-for="guds in arrrayofguds" :key="guds.nameofguds" :guds="guds">{{ guds.nameofguds }}</TwoBox>
+    <TwoBox v-for="guds in arrrayofguds" 
+    :key="guds.nameofguds" 
+    :guds="guds">{{ guds.nameofguds }}
+    <slot>
+      <button @click="cartadding">add to the side</button>
+    </slot>
+    </TwoBox>
   </div>
   <h2></h2>
   <h2>The total of the guds is {{ totalmoney }}</h2>
@@ -9,15 +15,20 @@
 <script setup>
 import { ref } from 'vue'
 import TwoBox from '@/components/TwoBox.vue';
-const arrrayofguds = ref([
+const arrrayofguds = ([
   {nameofguds: 'ApplePine', price:1},
   {nameofguds: 'RangeOr', price:2},
   {nameofguds: 'OniPepper', price:3},
   {nameofguds: 'seChee', price:1},
   {nameofguds: 'pleAp', price:2},
-  {nameofguds: 'Arpe'}
+  {nameofguds: 'Arpe', price:3}
 ])
 let totalmoney = 0
+
+function cartadding(item) {
+    totalmoney = total + item.price
+    return totalmoney
+}
 
 </script>
 
