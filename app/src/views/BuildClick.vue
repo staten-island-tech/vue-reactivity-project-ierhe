@@ -25,8 +25,8 @@ const arrrayofguds = ([
 ])
 let totalmoney = ref(0)
 
-function cartadding(item) {
-    totalmoney = total + item.price
+function cartadding() {
+    totalmoney += nameofguds.price
     return totalmoney
 }
 
