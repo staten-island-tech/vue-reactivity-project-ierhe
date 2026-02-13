@@ -6,11 +6,13 @@
     </TwoBox>
     <ClickingButton v-for="number in prices"
     :key="number.price"
-    :number="number">{{ number.price }}
+    :number="number">{{ number.price }}\
+    
     </ClickingButton>
     <button @click="ClickingButton">
       <slot>Total enter</slot>
     </button>
+    
   </div>
   <h2></h2>
   <h2>The total of the guds is {{ totalmoney }}</h2>
