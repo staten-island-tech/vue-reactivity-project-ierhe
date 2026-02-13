@@ -4,6 +4,10 @@
     :key="guds.nameofguds" 
     :guds="guds">{{ guds.nameofguds }}
     </TwoBox>
+    <ClickingButton v-for="number in prices"
+    :key="number.price"
+    :number="number">{{ number.price }}
+    </ClickingButton>
     <button @click="ClickingButton">
       <slot>Total enter</slot>
     </button>
@@ -27,9 +31,17 @@ const arrrayofguds = [
   {nameofguds: 'Totoma', price:3, img:''},
 ]
 
+const prices = [
+  {price:1},
+  {price:2},
+  {price:3},
+  {price:1},
+  {price:2},
+  {price:3},
+  {price:3},
+]
+
 let totalmoney = ref(0)
-
-
 
 </script>
 
