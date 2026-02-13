@@ -7,20 +7,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
 defineProps({
     guds:{
         type:Object,
         required: true
     }
 })
-
-const total = ref(0)
-
-function cartadding(item) {
-    totalmoney = total + item.price
-    return totalmoney
-}
 </script>
 
 <style scoped>
