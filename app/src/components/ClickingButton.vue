@@ -8,7 +8,7 @@
 
 <script setup>
 function cartadding() {
-  totalmoney += nameofguds.price
+  totalmoney += pirces.price
   return totalmoney
 }
 </script>
