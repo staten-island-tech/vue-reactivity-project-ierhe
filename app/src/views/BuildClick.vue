@@ -45,12 +45,6 @@ const prices = [
 
 let totalmoney = ref(0)
 
-export default {
-  methods: {
-    ClickingButton
-  }
-}
-
 </script>
 
 <style scoped>
