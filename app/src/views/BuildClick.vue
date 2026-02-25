@@ -6,7 +6,7 @@
     </TwoBox>
     <ClickingButton v-for="number in prices"
     :key="number.price"
-    :number="number">{{ number.price }}\
+    :number="number">{{ number.price }}
     
     </ClickingButton>
     <button @click="ClickingButton">
