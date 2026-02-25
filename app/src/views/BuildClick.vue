@@ -47,7 +47,7 @@ let totalmoney = ref(0)
 
 export default {
   methods: {
-    
+    ClickingButton
   }
 }
 
