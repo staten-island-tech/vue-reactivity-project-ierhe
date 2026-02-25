@@ -7,10 +7,13 @@
 </template>
 
 <script setup>
+import totalmoney from '@/components/ClickingButton.vue';
+
 function cartadding() {
   totalmoney += pirces.price
   return totalmoney
 }
+
 </script>
 
 <style scoped>
