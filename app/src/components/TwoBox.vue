@@ -11,8 +11,23 @@ defineProps({
     guds:{
         type:Object,
         required: true
-    }
+    },
+    methods: {
+        increment() {
+        this.count++
+    }  
+}
 })
+
+data(){
+    return {
+        count: 0
+    }
+}
+
+
+
+
 </script>
 
 <style scoped>
