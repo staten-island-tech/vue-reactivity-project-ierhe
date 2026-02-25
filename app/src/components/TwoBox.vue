@@ -19,13 +19,6 @@ defineProps({
 }
 })
 
-data(){
-    return {
-        count: 0
-    }
-}
-
-
 
 
 </script>
