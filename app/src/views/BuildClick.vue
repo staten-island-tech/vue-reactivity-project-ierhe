@@ -1,20 +1,19 @@
 <template>
   <div>
-    <TwoBox v-for="guds in arrrayofguds" 
-    :key="guds.nameofguds" 
-    :guds="guds">{{ guds.nameofguds }}
+    <TwoBox v-for="number in arrrayofguds" 
+    :key="number.price" 
+    :guds="number">{{ number.price }}
+    :guds="number">{{ guds.nameofguds }}
     </TwoBox>
     <ClickingButton v-for="number in prices"
     :key="number.price"
     :number="number">{{ number.price }}
-    
     </ClickingButton>
     <button @click="ClickingButton">
       <slot>Total enter</slot>
     </button>
     
   </div>
-  <h2></h2>
   <h2>The total of the guds is {{ totalmoney }}</h2>
 </template>
 
