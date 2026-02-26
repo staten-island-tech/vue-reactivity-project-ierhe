@@ -4,6 +4,10 @@
     :key="guds.nameofguds"
     :guds="guds">{{ guds.nameofguds }}
     </TwoBox>
+    <TwoBox v-for="pictures in arrrayofguds" 
+    :key="pictures.img"
+    :pictures="pictures">{{ pictures.img }}
+    </TwoBox>
     <ClickingButton v-for="number in prices"
     :key="number.price"
     :number="number">{{ number.price }}
