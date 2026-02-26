@@ -1,8 +1,7 @@
 <template>
   <div>
-    <TwoBox v-for="(guds, price) in arrrayofguds" 
-    :key="" 
-    :guds="price">{{ number.price }}
+    <TwoBox v-for="guds in arrrayofguds" 
+    :key="guds.nameofguds
     :guds="guds">{{ guds.nameofguds }}
     </TwoBox>
     <ClickingButton v-for="number in prices"
