@@ -14,9 +14,9 @@ import { ref } from 'vue'
 import TwoBox from '@/components/TwoBox.vue';
 
 function pizzaadding(ingridients){
-  totalmoney + ingridients.price
+  totalmoney += ingridients.price
   console.log(ingridients.price)
-  return totalmoney
+  
 }
 
 const arrrayofguds = [
