@@ -1,21 +1,10 @@
 <template>
   <div>
-    <TwoBox v-for="guds in arrrayofguds" 
-    :key="guds.nameofguds"
-    :guds="guds">{{ guds.nameofguds }}
+    <TwoBox v-for="guds in arrrayofguds" :key="guds.nameofguds" :guds="guds">{{ guds.nameofguds }}
+      <button @click="pizzaadding(guds)">Just click it at this point</button>
+      
     </TwoBox>
-    <TwoBox v-for="pictures in arrrayofguds" 
-    :key="pictures.img"
-    :pictures="pictures">{{ pictures.img }}
-    </TwoBox>
-    <ClickingButton v-for="number in prices"
-    :key="number.price"
-    :number="number">{{ number.price }}
-    </ClickingButton>
-    <button @click="ClickingButton">
-      <slot>Total enter</slot>
-    </button>
-    
+
   </div>
   <h2>The total of the guds is {{ totalmoney }}</h2>
 </template>
@@ -23,7 +12,12 @@
 <script setup>
 import { ref } from 'vue'
 import TwoBox from '@/components/TwoBox.vue';
-import ClickingButton from '@/components/ClickingButton.vue';
+
+function pizzaadding(ingridients){
+  totalmoney + ingridients.price
+  console.log(ingridients.price)
+  return totalmoney
+}
 
 const arrrayofguds = [
   {nameofguds: 'ApplePine', price:1, img:'/ApplePine.png'},
@@ -35,15 +29,6 @@ const arrrayofguds = [
   {nameofguds: 'Totoma', price:3, img:'/Totoma.png'},
 ]
 
-const prices = [
-  {price:1},
-  {price:2},
-  {price:3},
-  {price:1},
-  {price:2},
-  {price:3},
-  {price:3},
-]
 
 let totalmoney = ref(0)
 
@@ -54,9 +39,5 @@ div{
   display:flex;
   flex-direction: row;
 
-}
-
-.pleAP{
-  z-index: 1;
 }
 </style>
