@@ -2,7 +2,7 @@
     <div>
         <h2>{{ guds.nameofguds }}</h2>
         <h2>{{ guds.price }}</h2>
-        <button @click="cartadding">add to the side</button>
+        <slot></slot>
     </div>
 </template>
 
