@@ -2,6 +2,7 @@
     <div>
         <h2>{{ guds.nameofguds }}</h2>
         <h2>{{ guds.price }}</h2>
+        <!-- <img src="/image/ApplePine.png"> -->
         <slot></slot>
     </div>
 </template>

@@ -1,11 +1,16 @@
 <template>
   <div>
-    <TwoBox v-for="guds in arrrayofguds" :key="guds.nameofguds" :guds="guds">{{ guds.nameofguds }}
-      <button @click="pizzaadding(guds)">Just click it at this point</button>
+    <TwoBox v-for="guds in arrrayofguds" :key="guds.nameofguds" :guds="guds" :img="guds.img">{{ guds.nameofguds }}
+      <button @click="saladadding(guds)">Just click it at this point</button>
+      
+      
       
     </TwoBox>
-
+    
   </div>
+  <bowl> 
+    <img src="/images/glass.jpg">
+  </bowl>
   <h2>The total of the guds is {{ totalmoney }}</h2>
 </template>
 
@@ -13,20 +18,20 @@
 import { ref } from 'vue'
 import TwoBox from '@/components/TwoBox.vue';
 
-function pizzaadding(ingridients){
+function saladadding(ingridients){
   totalmoney += ingridients.price
   console.log(ingridients.price)
   
 }
 
 const arrrayofguds = [
-  {nameofguds: 'ApplePine', price:1, img:'/ApplePine.png'},
-  {nameofguds: 'RangeOr', price:2, img:'/RangeOr.png'},
-  {nameofguds: 'OniPepper', price:3, img:'/OniPepper.png'},
-  {nameofguds: 'seChee', price:1, img:'/seChess.png'},
-  {nameofguds: 'pleAp', price:2, img:'/pleAp.png'},
-  {nameofguds: 'Arpe', price:3, img:'/Arpe.png'},
-  {nameofguds: 'Totoma', price:3, img:'/Totoma.png'},
+  {nameofguds: 'ApplePine', price:1, img:'/images/ApplePine.png'},
+  {nameofguds: 'RangeOr', price:2, img:'/images/RangeOr.png'},
+  {nameofguds: 'OniPepper', price:3, img:'/images/OniPepper.png'},
+  {nameofguds: 'seChee', price:1, img:'/images/seChess.png'},
+  {nameofguds: 'pleAp', price:2, img:'/images/pleAp.png'},
+  {nameofguds: 'Arpe', price:3, img:'/images/Arpe.png'},
+  {nameofguds: 'Totoma', price:3, img:'/images/Totoma.png'},
 ]
 
 
