@@ -2,7 +2,7 @@
   <div>
     <TwoBox v-for="guds in arrrayofguds" :key="guds.nameofguds" :guds="guds" :img="guds.img">{{ guds.nameofguds }}
       <button @click="saladadding(guds)">Just click it at this point</button>
-      
+
       
       
     </TwoBox>
@@ -40,6 +40,7 @@ const totalmoney = ref(0)
 </script>
 
 <style scoped>
+
 div{
   display:flex;
   flex-direction: row;
