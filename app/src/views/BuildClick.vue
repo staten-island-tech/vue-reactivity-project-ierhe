@@ -11,7 +11,7 @@
   <bowl> 
     <img src="/images/glass.jpg">
   </bowl>
-  <h2>The total of the guds is {{ totalmoney }}</h2>
+  <h2>The total of the guds is {{ totalmoney }}$</h2>
 </template>
 
 <script setup>
@@ -19,7 +19,7 @@ import { ref } from 'vue'
 import TwoBox from '@/components/TwoBox.vue';
 
 function saladadding(ingridients){
-  totalmoney += ingridients.price
+  totalmoney.value += ingridients.price
   console.log(ingridients.price)
   
 }
@@ -35,7 +35,7 @@ const arrrayofguds = [
 ]
 
 
-let totalmoney = ref(0)
+const totalmoney = ref(0)
 
 </script>
 
