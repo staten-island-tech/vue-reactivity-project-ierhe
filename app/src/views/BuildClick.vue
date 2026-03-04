@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <TwoBox v-for="guds in arrrayofguds" :key="guds.nameofguds" :guds="guds" :img="guds.img">{{ guds.nameofguds }}
+  <div class="container">
+    <TwoBox v-for="guds in arrrayofguds" :key="guds.nameofguds" :guds="guds" :img="guds.img">
       <button @click="saladadding(guds)">Just click it at this point</button>
-      <img src="/images/ApplePine.img">
+      <img :src="guds.img">
       
       
     </TwoBox>
@@ -29,7 +29,7 @@ const arrrayofguds = [
   {nameofguds: 'ApplePine', price:1, img:'/images/ApplePine.png'},
   {nameofguds: 'RangeOr', price:2, img:'/images/RangeOr.png'},
   {nameofguds: 'OniPepper', price:3, img:'/images/OniPepper.png'},
-  {nameofguds: 'seChee', price:1, img:'/images/seChess.png'},
+  {nameofguds: 'seChee', price:1, img:'/images/seChee.png'},
   {nameofguds: 'pleAp', price:2, img:'/images/pleAp.png'},
   {nameofguds: 'Arpe', price:3, img:'/images/Arpe.png'},
   {nameofguds: 'Totoma', price:3, img:'/images/Totoma.png'},
@@ -42,9 +42,12 @@ const totalmoney = ref(0)
 
 <style scoped>
 
-div{
+.container {
   display:flex;
-  flex-direction: row;
+  flex-wrap: wrap;
 
+}
+.container > * {
+  width: 15%;
 }
 </style>
