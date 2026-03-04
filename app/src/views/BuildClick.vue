@@ -16,6 +16,9 @@
     </ul>
   </section>
   <h2>The total of the guds is {{ totalmoney }}$</h2>
+  <div class="listguds">
+    <h2></h2>
+  </div>
 </template>
 
 <script setup>
@@ -25,6 +28,8 @@ import TwoBox from '@/components/TwoBox.vue';
 function saladadding(ingridients){
   totalmoney.value += ingridients.price
   console.log(ingridients.price);
+  
+  
 }
 
 const arrrayofguds = [
@@ -59,6 +64,9 @@ const totalmoney = ref(0)
 .pictures {
   display: flex;
   align-items: center;
-  position: relative;
+  
+}
+.listguds {
+  align-items: center;
 }
 </style>
