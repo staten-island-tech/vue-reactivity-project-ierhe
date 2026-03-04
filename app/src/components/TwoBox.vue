@@ -29,8 +29,8 @@ div{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 500px;
-    width: 300px;
+    height: 600px;
+    width: 500px;
     border: 3px solid blue;
     margin: 100px;
 }
