@@ -50,4 +50,8 @@ const totalmoney = ref(0)
 .container > * {
   width: 15%;
 }
+.saladbowl {
+  display: flex;
+  object-position: center;
+}
 </style>
