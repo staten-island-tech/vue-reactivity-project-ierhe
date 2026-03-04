@@ -2,14 +2,18 @@
   <div class="container">
     <TwoBox v-for="guds in arrrayofguds" :key="guds.nameofguds" :guds="guds" :img="guds.img">
       <button @click="saladadding(guds)">Just click it at this point</button>
-      <img :src="guds.img">
-      
+      <section id="pictures">
+        <img :src="guds.img">
+      </section>
       
     </TwoBox>
     
   </div>
   <section id="saladbowl"> 
     <img src="/images/glass.jpg">
+    <ul id="pictures">
+      <img src="/images/pleAp.png">
+    </ul>
   </section>
   <h2>The total of the guds is {{ totalmoney }}$</h2>
 </template>
@@ -21,8 +25,6 @@ import TwoBox from '@/components/TwoBox.vue';
 function saladadding(ingridients){
   totalmoney.value += ingridients.price
   console.log(ingridients.price);
-
-  
 }
 
 const arrrayofguds = [
@@ -52,6 +54,11 @@ const totalmoney = ref(0)
 }
 .saladbowl {
   display: flex;
-  object-position: center;
+  align-items: center;
+}
+.pictures {
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 </style>
