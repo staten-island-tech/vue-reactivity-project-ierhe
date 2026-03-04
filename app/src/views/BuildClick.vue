@@ -2,21 +2,12 @@
   <div>
     <TwoBox v-for="guds in arrrayofguds" :key="guds.nameofguds" :guds="guds" :img="guds.img">{{ guds.nameofguds }}
       <button @click="saladadding(guds)">Just click it at this point</button>
-      
+      <img src="/images/ApplePine.img">
       
       
     </TwoBox>
     
   </div>
-<!--   <section id="ingiridents list">
-    <img src="/images/ApplePine.img">
-    <img src="/images/RangeOr.img">
-    <img src="/images/OniPepper.img">
-    <img src="/images/seChess.img">
-    <img src="/images/pleAp.img">
-    <img src="/images/Totoma.img">
-
-  </section> -->
   <section id="saladbowl"> 
     <img src="/images/glass.jpg">
   </section>
@@ -35,13 +26,13 @@ function saladadding(ingridients){
 }
 
 const arrrayofguds = [
-  {nameofguds: 'ApplePine', price:1, img:'/images/ApplePine.img'},
-  {nameofguds: 'RangeOr', price:2, img:'/images/RangeOr.img'},
-  {nameofguds: 'OniPepper', price:3, img:'/images/OniPepper.img'},
-  {nameofguds: 'seChee', price:1, img:'/images/seChess.img'},
-  {nameofguds: 'pleAp', price:2, img:'/images/pleAp.img'},
-  {nameofguds: 'Arpe', price:3, img:'/images/Arpe.img'},
-  {nameofguds: 'Totoma', price:3, img:'/images/Totoma.img'},
+  {nameofguds: 'ApplePine', price:1, img:'/images/ApplePine.png'},
+  {nameofguds: 'RangeOr', price:2, img:'/images/RangeOr.png'},
+  {nameofguds: 'OniPepper', price:3, img:'/images/OniPepper.png'},
+  {nameofguds: 'seChee', price:1, img:'/images/seChess.png'},
+  {nameofguds: 'pleAp', price:2, img:'/images/pleAp.png'},
+  {nameofguds: 'Arpe', price:3, img:'/images/Arpe.png'},
+  {nameofguds: 'Totoma', price:3, img:'/images/Totoma.png'},
 ]
 
 
