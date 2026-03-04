@@ -69,5 +69,6 @@ const totalmoney = ref(0)
 }
 .listguds {
   align-items: center;
+  justify-content: space-around;
 }
 </style>
