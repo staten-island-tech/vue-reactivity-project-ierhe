@@ -28,8 +28,8 @@ import TwoBox from '@/components/TwoBox.vue';
 function saladadding(ingridients){
   totalmoney.value += ingridients.price
   console.log(ingridients.price);
-  
-  
+  const total = ingridients.nameofguds + ingridients.price
+  ItemList += total  
 }
 
 const arrrayofguds = [
@@ -42,6 +42,7 @@ const arrrayofguds = [
   {nameofguds: 'Totoma', price:3, img:'/images/Totoma.png'},
 ]
 
+const ItemList = []
 
 const totalmoney = ref(0)
 
