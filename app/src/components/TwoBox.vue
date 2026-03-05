@@ -32,6 +32,8 @@ div{
     height: 600px;
     width: 600px;
     border: 3px solid cyan;
+    box-shadow: 5px 5px 5px rgb(0, 168, 190);
     margin: 100px;
+    border-radius: 5%;
 }
 </style>
