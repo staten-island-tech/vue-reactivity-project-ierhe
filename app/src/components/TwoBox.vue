@@ -30,8 +30,8 @@ div{
     align-items: center;
     justify-content: space-around;
     height: 600px;
-    width: 500px;
-    border: 3px solid blue;
+    width: 600px;
+    border: 3px solid cyan;
     margin: 100px;
 }
 </style>
