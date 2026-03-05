@@ -16,7 +16,7 @@
         v-for="(ingri, index) in ingridientsList"
         :key="index"
         :src="ingri.img"
-        class="THElayer"
+        class="foodlayer"
         :style="{zIndex:index+1}"
       
         >
@@ -24,10 +24,9 @@
     </div>
 
   </section>
+
   <h2>The total of the guds bowl is {{ totalmoney }}$</h2>
-  <div class="listguds">
-    <h2></h2>
-  </div>
+
 </template>
 
 <script setup>
@@ -38,6 +37,7 @@ function saladadding(ingridients){
   totalmoney.value += ingridients.price
   console.log(ingridients.price);
   ingridientsList.value.push(ingridients)
+
 }
 
 const arrrayofguds = [
@@ -53,6 +53,7 @@ const arrrayofguds = [
 const ingridientsList = ref([])
 
 const totalmoney = ref(0)
+
 
 </script>
 
@@ -81,14 +82,17 @@ const totalmoney = ref(0)
 }
 .bowl-container{
   position: relative;
-  width: 300px;
+  width: 600px;
+  height: 600px;
 
 }
-.THElayer{
+.bowl {
+  position: relative;
+}
+.foodlayer{
   position: absolute;
-  width: 100%;
-  width: 95%;
-  height: 95%;
+  top: 20%;
+  padding-left: 24%;
 
 }
 .bowl {
