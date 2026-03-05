@@ -10,12 +10,24 @@
     
   </div>
   <section id="saladbowl"> 
-    <img src="/images/glass.jpg">
+    <div class="bowl-container">
+      <img class="bowl" src="/images/glass.jpg">
+      <img
+        v-for="(ingri, index) in ingridientsList"
+        :key="index"
+        :src="ingri.img"
+        class="THElayer"
+        :style="{zIndex:index+1}"
+      
+        >
+
+    </div>
+
     <ul id="pictures">
       <img src="/images/pleAp.png">
     </ul>
   </section>
-  <h2>The total of the guds is {{ totalmoney }}$</h2>
+  <h2>The total of the guds bowl is {{ totalmoney }}$</h2>
   <div class="listguds">
     <h2></h2>
   </div>
@@ -28,8 +40,7 @@ import TwoBox from '@/components/TwoBox.vue';
 function saladadding(ingridients){
   totalmoney.value += ingridients.price
   console.log(ingridients.price);
-  const total = ingridients.nameofguds + ingridients.price
-  ItemList += total  
+  ingridientsList.value.push(ingridients)
 }
 
 const arrrayofguds = [
@@ -42,7 +53,7 @@ const arrrayofguds = [
   {nameofguds: 'Totoma', price:3, img:'/images/Totoma.png'},
 ]
 
-const ItemList = []
+const ingridientsList = ref([])
 
 const totalmoney = ref(0)
 
@@ -70,5 +81,15 @@ const totalmoney = ref(0)
 .listguds {
   align-items: center;
   justify-content: space-around;
+}
+.bowl-container{
+  position: relative;
+  width: 300px;
+
+}
+.THElayer{
+  position: absolute;
+  width: 100%;
+
 }
 </style>
