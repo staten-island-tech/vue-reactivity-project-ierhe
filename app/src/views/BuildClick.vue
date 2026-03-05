@@ -93,6 +93,8 @@ const totalmoney = ref(0)
   position: absolute;
   top: 20%;
   padding-left: 24%;
+  width: 50%;
+  height: 50%;
 
 }
 .bowl {
