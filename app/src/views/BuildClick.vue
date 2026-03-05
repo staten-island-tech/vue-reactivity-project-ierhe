@@ -2,7 +2,7 @@
   <div class="container">
     <TwoBox v-for="guds in arrrayofguds" :key="guds.nameofguds" :guds="guds" :img="guds.img">
       <button @click="saladadding(guds)">Just click it at this point</button>
-      <section id="pictures">
+      <section class="pictures">
         <img :src="guds.img">
       </section>
       
@@ -65,7 +65,7 @@ const totalmoney = ref(0)
 
 }
 .container > * {
-  width: 15%;
+  width: 14%;
 }
 .saladbowl {
   display: flex;
@@ -74,6 +74,7 @@ const totalmoney = ref(0)
 .pictures {
   display: flex;
   align-items: center;
+
   
 }
 .listguds {
