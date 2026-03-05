@@ -23,9 +23,6 @@
 
     </div>
 
-    <ul id="pictures">
-      <img src="/images/pleAp.png">
-    </ul>
   </section>
   <h2>The total of the guds bowl is {{ totalmoney }}$</h2>
   <div class="listguds">
@@ -90,6 +87,12 @@ const totalmoney = ref(0)
 .THElayer{
   position: absolute;
   width: 100%;
+  width: 95%;
+  height: 95%;
 
+}
+.bowl {
+  display: block;
+  width: 100%;
 }
 </style>
