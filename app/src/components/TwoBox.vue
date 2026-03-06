@@ -12,11 +12,7 @@ defineProps({
         type:Object,
         required: true
     },
-    methods: {
-        increment() {
-        this.count++
-    }  
-}
+
 })
 
 
@@ -24,7 +20,7 @@ defineProps({
 </script>
 
 <style scoped>
-div{
+ul{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +28,7 @@ div{
     height: 600px;
     width: 1000px;
     border: 3px solid cyan;
-    box-shadow: 5px 5px 5px rgb(0, 168, 190);
+    box-shadow: 5px 5px 5px rgba(0, 168, 190, 0.815);
     margin: 50px;
     border-radius: 5%;
 }
