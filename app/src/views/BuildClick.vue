@@ -1,5 +1,6 @@
 <template>
-  <div class="container">
+
+  <ul class="container">
     <TwoBox v-for="guds in arrrayofguds" :key="guds.nameofguds" :guds="guds">
       <button @click="saladadding(guds)">Just click it to add to the bowl</button>
       <section class="pictures">
@@ -8,7 +9,8 @@
       
     </TwoBox>
     
-  </div>
+  </ul>
+
   <div>
     <section id="saladbowl"> 
       <div class="bowl-container">
@@ -61,11 +63,11 @@ const totalmoney = ref(0)
 
 <style scoped>
 div {
-  
-  background-image: 
+  background-image: url("/images/bread.png");
+  /* background-image: 
     radial-gradient(transparent 45%)
     url("/images/bread.png");
-  background-image: rgba(0, 0, 0, 0.068);
+  background-image: rgba(0, 0, 0, 0.068); */
   align-items: center;
 
 }
