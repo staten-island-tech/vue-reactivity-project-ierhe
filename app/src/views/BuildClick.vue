@@ -1,15 +1,16 @@
 <template>
-
-  <ul class="container">
-    <TwoBox v-for="guds in arrrayofguds" :key="guds.nameofguds" :guds="guds">
-      <button @click="saladadding(guds)">Just click it to add to the bowl</button>
-      <section class="pictures">
-        <img :src="guds.img">
-      </section>
+  <div>
+    <ul class="container">
+      <TwoBox v-for="guds in arrrayofguds" :key="guds.nameofguds" :guds="guds">
+        <button @click="saladadding(guds)">Just click it to add to the bowl</button>
+        <section class="pictures">
+          <img :src="guds.img">
+        </section>
+        
+      </TwoBox>
       
-    </TwoBox>
-    
-  </ul>
+    </ul>
+  </div>
 
   <div>
     <section id="saladbowl"> 
