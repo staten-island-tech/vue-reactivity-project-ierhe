@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <TwoBox v-for="guds in arrrayofguds" :key="guds.nameofguds" :guds="guds" :img="guds.img">
-      <button @click="saladadding(guds)">Just click it at this point</button>
+    <TwoBox v-for="guds in arrrayofguds" :key="guds.nameofguds" :guds="guds">
+      <button @click="saladadding(guds)">Just click it to add to the bowl</button>
       <section class="pictures">
         <img :src="guds.img">
       </section>
@@ -9,21 +9,23 @@
     </TwoBox>
     
   </div>
-  <section id="saladbowl"> 
-    <div class="bowl-container">
-      <img class="bowl" src="/images/glass.jpg">
-      <img
-        v-for="(ingri, index) in ingridientsList"
-        :key="index"
-        :src="ingri.img"
-        class="foodlayer"
-        :style="{zIndex:index+1}"
-      
-        >
+  <div>
+    <section id="saladbowl"> 
+      <div class="bowl-container">
+        <img class="bowl" src="/images/glass.jpg">
+        <img
+          v-for="(ingri, index) in ingridientsList"
+          :key="index"
+          :src="ingri.img"
+          class="foodlayer"
+          :style="{zIndex:index+1}"
+        
+          >
 
-    </div>
+      </div>
 
-  </section>
+    </section>
+  </div>
 
   <h2>The total of the guds bowl is {{ totalmoney }}$</h2>
 
@@ -58,14 +60,24 @@ const totalmoney = ref(0)
 </script>
 
 <style scoped>
+div {
+
+  /* background-image: url("/images/bread.png"); */
+  align-items: center;
+
+}
+
+
+
 
 .container {
   display:flex;
   flex-wrap: wrap;
 
+
 }
 .container > * {
-  width: 14%;
+  width: 25%;
 }
 .saladbowl {
   display: flex;
@@ -76,10 +88,6 @@ const totalmoney = ref(0)
   align-items: center;
 
   
-}
-.listguds {
-  align-items: center;
-  justify-content: space-around;
 }
 .bowl-container{
   position: relative;
