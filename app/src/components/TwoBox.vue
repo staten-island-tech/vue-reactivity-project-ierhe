@@ -20,7 +20,7 @@ defineProps({
 </script>
 
 <style scoped>
-ul{
+div{
     display:flex;
     flex-direction: column;
     align-items: center;
