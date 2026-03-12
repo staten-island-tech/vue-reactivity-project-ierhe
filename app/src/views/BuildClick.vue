@@ -63,17 +63,6 @@ const totalmoney = ref(0)
 </script>
 
 <style scoped>
-div {
-  background-image: url("/images/bread.png");
-  /* background-image: 
-    radial-gradient(transparent 45%)
-    url("/images/bread.png");
-  background-image: rgba(0, 0, 0, 0.068); */
-  align-items: center;
-
-}
-
-
 
 
 .container {
